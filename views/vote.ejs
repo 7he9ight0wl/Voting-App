@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote</title>
+</head>
+<body>
+  <h1>Voting Page</h1>
+  <!-- Add your voting form here -->
+  <form action="/vote" method="post">
+    <% if(!message){ %>
+    <label for="candidate">Choose a Candidate:</label>
+    <select id="candidate" name="candidate" required>
+      <option value="candidate1">Candidate 1</option>
+      <option value="candidate2">Candidate 2</option>
+      <option value="candidate3">Candidate 3</option>
+      <option value="candidate4">Candidate 4</option>
+      <!-- Add more options as needed -->
+    </select>
+    <% } else { %>
+      <p><%= message %></p>
+    <% } %>  
+    <br>
+    <input type="submit" value="Vote">
+  </form>
+
+ 
+
+</body>
+</html>
